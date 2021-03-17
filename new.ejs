@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Comments</title>
+</head>
+<body>
+  <h1>Make a new comment</h1>
+  <form action="/comments" method="POST">
+    <div>
+    <label for="uName">Enter UserName:</label>
+    <input type="text" placeholder="user name" name="username" id="uName">
+  </div>
+    <div>
+    <label for="comment">Comment Text:</label>
+    <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+  </div>
+  <button type="submit">Post Comment</button>
+  </form>
+  <p style="font-size: 2rem; width: 65ch">
+    -This page creates a form with the action path set to '/comments'. This form is routed to a POST request that pulls the form data and pushes it onto the comment array.
+    - Once the request is triggered we are redirected to the /comments page where we can see our new comment is displayed.
+  </p>
+  <!-- <div>
+    <form action="comments/show" method="get">
+      <label for="idNum">Search by Id Number: </label>
+      <input type="number" name="idNum" id="idNum">
+    </form>
+  </div> -->
+  <a href="/comments">Back to Index</a>
+</body>
+</html>

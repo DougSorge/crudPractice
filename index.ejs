@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments Index</title>
+</head>
+<body>
+  <h1>
+    Comments:
+  </h1>
+  <ul>
+   <% for(entry of comments){ %>
+    <li> 
+      <%= entry.comment %> 
+      by <strong><%= entry.username %></strong>
+      <a href="comments/<%= entry.id %>">Details</a> 
+     </li>
+    
+  <% } %>
+
+  <div>
+    <p style="width: 75ch">
+      - The above comments list is rendered in RESTful fashion and is called the index route. It is called this because it is an index of all comments, or items or whatever we are working with. - An array of objects called comments was passed into the get request route and a template was created to display the data inside of that array.
+    </p>
+  </div>
+    <a href="comments/new">New Comment</a>
+
+    <br> <br>
+
+    <!-- <div>
+    <form action="comments/show" method="get">
+      <label for="idNum">Search by Id Number: </label>
+      <input type="number" name="idNum" id="idNum">
+    </form>
+  </div> -->
+  <div>
+    <p style="width: 75ch">
+      - The search form above submits a post request with a name of idNum. This name correlates with the query set up in the get request on the '/show view'. Instead of using the slug method, this is also viable.
+    </p>
+  </div>
+  </ul>
+</body>
+</html>

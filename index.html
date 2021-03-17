@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1>GET</h1>
+  <form action="http://localhost:3000/cats" method="get">
+    <input type="text" name="catName" placeholder="What's your cat's name?">
+ 
+    <div class="btn-grp">
+    <label for="longHair">
+      Long Hair:
+      <input type="radio" name="hair" value="long" id="longHair">
+    </label>
+
+    <label for="shortHair">
+      Short Hair:
+      <input type="radio" name="hair" value="short" id="shortHair">
+    </label>
+  </div>
+  </form>
+  <h1>POST</h1>
+  <form action="http://localhost:3000/cats" method="post">
+    <input type="text" name="catName" placeholder="What's your cat's name?">
+ 
+    <div class="btn-grp">
+    <label for="longHair">
+      Long Hair:
+      <input type="radio" name="hair" value="long" id="longHair">
+    </label>
+
+    <label for="shortHair">
+      Short Hair:
+      <input type="radio" name="hair" value="short" id="shortHair">
+    </label>
+  </div>
+  </form>
+
+  <script src='index.js'></script>
+</body>
+</html>
